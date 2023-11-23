@@ -1,4 +1,5 @@
 import React from 'react';
+import ShowOtherAdviceButton from './ShowOtherAdviceButton';
 import './App.css';
 
 class App extends React.Component {
@@ -22,12 +23,7 @@ class App extends React.Component {
 		return (
 			<div className="App">
 				<p className="Advice">{this.state.advice || '…'}</p>
-				<button
-					className="Advice-other-advice-button"
-					onClick={this.loadAdvice}
-				>
-					Show other advice
-				</button>
+				<ShowOtherAdviceButton onClick={this.loadAdvice} />
 			</div>
 		);
 	}
